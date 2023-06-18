@@ -27,11 +27,11 @@ func main() {
 	}
 
 	conf := mysql.Config{
-		User:      os.Getenv("DB_USERNAME"),
-		Passwd:    os.Getenv("DB_PASSWORD"),
+		User:      os.Getenv("NS_MARIADB_DATABASE"),
+		Passwd:    os.Getenv("NS_MARIADB_PASSWORD"),
 		Net:       "tcp",
-		Addr:      os.Getenv("DB_HOSTNAME") + ":" + os.Getenv("DB_PORT"),
-		DBName:    os.Getenv("DB_DATABASE"),
+		Addr:      os.Getenv("NS_MARIADB_HOSTNAME") + ":" + os.Getenv("NS_MARIADB_PORT"),
+		DBName:    os.Getenv("NS_MARIADB_DATABASE"),
 		ParseTime: true,
 		Collation: "utf8mb4_unicode_ci",
 		Loc:       jst,
